@@ -1,0 +1,30 @@
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="./lab.css"/>
+  <link rel="stylesheet" type="text/css" href="./jquery.bxslider.css"/>
+  <script src='./jquery-3.2.1.min.js'></script>
+  <script src="./jquery.bxslider.js"></script>
+</head>
+<body>
+ <div class='bxslider'>
+          <div><img src="./img/1.jpg"></div>
+          <div><img src="./img/2.jpg"></div>
+          <div><img src="./img/3.jpg"></div>
+      </div>
+</body>
+<script type="text/javascript">
+$( document ).ready(function() {
+    console.log( "ready!" );
+  
+    $('.bxslider').bxSlider({
+      auto: false,
+      autoControls: false,
+      stopAutoOnClick: false,
+      pager: false,
+      slideWidth: 400,
+      slideHeight: 300
+      });
+});
+
+</script>
+</html>

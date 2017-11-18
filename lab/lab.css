@@ -1,0 +1,57 @@
+
+div.back-ground {
+ width: 100%;
+ height: 100%;
+  background: red;
+}
+
+div.left-title{
+  display: inline-block;
+ width: 33%;
+  height: 100%;
+  vertical-align: middle;
+  
+}
+
+div.center-img{
+  display: inline-block;
+  width:33%;
+  height: 100%;
+  vertical-align: middle;
+  
+}
+
+div.right-img{
+    display: inline-block;
+  width:33%;
+  height: 100%;
+  vertical-align: middle;
+  
+}
+
+img.abs{
+  position: absolute;
+  display: inline-block;
+ width: 150px;
+  height: 100px;
+  
+}
+
+img.top{
+  padding-top: 160px;
+  z-index: 3;
+}
+
+img.middle{
+  padding-top: 200px;
+  z-index: 2;
+  filter: grayscale(100%);
+
+}
+
+img.bottom{
+  padding-top: 240px;
+  z-index: 1;
+        filter: grayscale(100%);
+
+}
