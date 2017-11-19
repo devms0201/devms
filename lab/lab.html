@@ -1,5 +1,6 @@
 <html>
 <head>
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Quicksand" />
   <link rel="stylesheet" type="text/css" href="./lab.css"/>
   <link rel="stylesheet" type="text/css" href="./jquery.bxslider.css"/>
   <script src='./jquery-3.2.1.min.js'></script>
@@ -7,26 +8,36 @@
 </head>
 <body>
   <div class='back-ground'>
-    <div class='left-title'>
-      <ul>
-        <li onClick='click1()'>Pic1</li>
-        <li onClick='click2()'>Pic2</li>
-        <li onClick='click3()'>Pic2</li>
-      </ul>
-    </div>
-    <div class='center-img'>
-      <div class='center-pic'>
-        <img class='abs top' src="./img/1.jpg">
-        <img class='abs middle' src="./img/2.jpg">
-        <img class='abs bottom' src="./img/3.jpg">
-        
+    <div class='wrapper'>
+      <div class='left-title'>
+        <div style='display:inline-block;'>
+          <ul>
+            <li onClick='click1()'>Step 01 Example1</li>
+            <br>
+            <li onClick='click2()'>Setp 02 Example2</li>
+            <br>
+            <li onClick='click3()'>Step 03 Example3</li>
+          </ul>
+        </div>
       </div>
-    </div>
-    <div class='right-img'>
-      <div class='bxslider'>
-          <div><img src="./img/1.jpg"></div>
-          <div><img src="./img/2.jpg"></div>
-          <div><img src="./img/3.jpg"></div>
+      <div class='center-img'>
+        <div class='center-pic'>
+          <div class='img-area'>
+            <img class='abs top' src="./img/centerimg3.png" style="width:300px; height: 200px;">
+            <img class='abs middle' src="./img/centerimg2.png" style="width:300px; height: 200px;">
+            <img class='abs bottom' src="./img/centerimg1.jpg" style="width:300px; height: 200px;">
+          </div>
+          <div class='text-area'></div>
+        </div>
+      </div>
+      <div class='right-img'>
+        <div class='sliderwrapper'>
+          <div class='bxslider'>
+              <div><img src="./img/img1.PNG"></div>
+              <div><img src="./img/img3.PNG"></div>
+            <div><img src="./img/img2.PNG"></div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -34,68 +45,69 @@
 <script type="text/javascript">
   var slider;
 $( document ).ready(function() {
-    console.log( "ready!" );
     
    slider = $('.bxslider').bxSlider({
       auto: false,
       autoControls: false,
       stopAutoOnClick: false,
       pager: false,
-      slideWidth: 400
-      });
-
+      controls:false,
+      slideWidth: 250,
+    });
+   
+  $('.bx-viewport').css('height', 125);
 });
   function click1(){
+    $('li').eq(0).css("font-weight", "bold");
+    $('li').eq(1).css("font-weight", "normal");
+    $('li').eq(2).css("font-weight", "normal");
     slider.goToSlide(0);
-    $("img.top").css("z-index" , 4);
-        $("img.top").css("padding-top" , 160);
-                    $("img.top").css("filter" , "grayscale(0%)");
+    $('.text-area').html("Example1");
+    
+    $('img.top').animate({paddingLeft: 120, paddingTop: 20});
+    $("img.top").css("filter" , "grayscale(0%)");
 
-    $("img.middle").css("z-index" , 2);
-        $("img.middle").css("padding-top" , 200);
-                    $("img.middle").css("filter" , "grayscale(100%)");
+    $("img.middle").animate({paddingLeft : 60, paddingTop:60});
+    $("img.middle").css("filter" , "grayscale(100%)");
 
-
-    $("img.bottom").css("z-index" , 1);
-        $("img.bottom").css("padding-top" , 240);
-                  $("img.bottom").css("filter" , "grayscale(100%)" );
-
+    $("img.bottom").animate({paddingLeft : 0, paddingTop: 80});
+    $("img.bottom").css("filter" , "grayscale(100%)" );
   }
   
   function click2(){
-        slider.goToSlide(1);
-    $("img.top").css("z-index" , 3);
-            $("img.top").css("padding-top" , 60);
-                    $("img.top").css("filter" , "grayscale(100%)");
+    $('li').eq(0).css("font-weight", "normal");
+    $('li').eq(1).css("font-weight", "bold");
+    $('li').eq(2).css("font-weight", "normal");
 
+    slider.goToSlide(1);
+    $('.text-area').html("Example2");
 
-    $("img.middle").css("z-index" , 4);
-            $("img.middle").css("padding-top" , 200);
-                    $("img.middle").css("filter" , "grayscale(0%)");
+    $('img.top').animate({paddingLeft: 160, paddingTop: 0});
+    $("img.top").css("filter" , "grayscale(100%)");
 
+    $("img.middle").animate({paddingLeft : 60, paddingTop:60});
+    $("img.middle").css("filter" , "grayscale(0%)");
 
-    $("img.bottom").css("z-index" , 1);
-            $("img.bottom").css("padding-top" , 240);
-                $("img.bottom").css("filter" , "grayscale(100%)" );
-
-    
+    $("img.bottom").animate({paddingLeft : 0, paddingTop: 80});
+    $("img.bottom").css("filter" , "grayscale(100%)" );
   }
   
   function click3(){
+    $('li').eq(0).css("font-weight", "normal");
+    $('li').eq(1).css("font-weight", "normal");
+    $('li').eq(2).css("font-weight", "bold");
+    
     slider.goToSlide(2);
-    $("img.top").css("z-index" , 3);
-                $("img.top").css("padding-top" , 60);
-                $("img.top").css("filter" , "grayscale(100%)");
+    $('.text-area').html("Example3");
 
-    $("img.middle").css("z-index" , 2);
-                $("img.middle").css("padding-top" , 80);
-                $("img.middle").css("filter" , "grayscale(100%)");
+    $('img.top').animate({paddingLeft: 160, paddingTop: 0});
+    $("img.top").css("filter" , "grayscale(100%)");
 
-    $("img.bottom").css("z-index" , 4);
-                $("img.bottom").css("padding-top" , 200);
-                $("img.bottom").css("filter" , "grayscale(0%)" );
+    $("img.middle").animate({paddingLeft : 80, paddingTop:20});
+    $("img.middle").css("filter" , "grayscale(100%)");
 
-        
+    $("img.bottom").animate({paddingLeft : 0, paddingTop: 80});
+    $("img.bottom").css("filter" , "grayscale(0%)" );
   }
     
 </script>

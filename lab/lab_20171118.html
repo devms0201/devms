@@ -1,0 +1,206 @@
+<<<<<<< HEAD
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="./lab.css"/>
+  <link rel="stylesheet" type="text/css" href="./jquery.bxslider.css"/>
+  <script src='./jquery-3.2.1.min.js'></script>
+  <script src="./jquery.bxslider.js"></script>
+</head>
+<body>
+  <div class='back-ground'>
+    <div class='left-title'>
+      <ul>
+        <li onClick='click1()'>Pic1</li>
+        <li onClick='click2()'>Pic2</li>
+        <li onClick='click3()'>Pic2</li>
+      </ul>
+    </div>
+    <div class='center-img'>
+      <div class='center-pic'>
+        <img class='abs top' src="./img/1.jpg">
+        <img class='abs middle' src="./img/2.jpg">
+        <img class='abs bottom' src="./img/3.jpg">
+        
+      </div>
+    </div>
+    <div class='right-img'>
+      <div class='bxslider'>
+          <div><img src="./img/1.jpg"></div>
+          <div><img src="./img/2.jpg"></div>
+          <div><img src="./img/3.jpg"></div>
+      </div>
+    </div>
+  </div>
+</body>
+<script type="text/javascript">
+  var slider;
+$( document ).ready(function() {
+    console.log( "ready!" );
+    
+   slider = $('.bxslider').bxSlider({
+      auto: false,
+      autoControls: false,
+      stopAutoOnClick: false,
+      pager: false,
+      slideWidth: 400
+      });
+
+});
+  function click1(){
+    slider.goToSlide(0);
+    $("img.top").css("z-index" , 4);
+        $("img.top").css("padding-top" , 160);
+                    $("img.top").css("filter" , "grayscale(0%)");
+
+    $("img.middle").css("z-index" , 2);
+        $("img.middle").css("padding-top" , 200);
+                    $("img.middle").css("filter" , "grayscale(100%)");
+
+
+    $("img.bottom").css("z-index" , 1);
+        $("img.bottom").css("padding-top" , 240);
+                  $("img.bottom").css("filter" , "grayscale(100%)" );
+
+  }
+  
+  function click2(){
+        slider.goToSlide(1);
+    $("img.top").css("z-index" , 3);
+            $("img.top").css("padding-top" , 60);
+                    $("img.top").css("filter" , "grayscale(100%)");
+
+
+    $("img.middle").css("z-index" , 4);
+            $("img.middle").css("padding-top" , 200);
+                    $("img.middle").css("filter" , "grayscale(0%)");
+
+
+    $("img.bottom").css("z-index" , 1);
+            $("img.bottom").css("padding-top" , 240);
+                $("img.bottom").css("filter" , "grayscale(100%)" );
+
+    
+  }
+  
+  function click3(){
+    slider.goToSlide(2);
+    $("img.top").css("z-index" , 3);
+                $("img.top").css("padding-top" , 60);
+                $("img.top").css("filter" , "grayscale(100%)");
+
+    $("img.middle").css("z-index" , 2);
+                $("img.middle").css("padding-top" , 80);
+                $("img.middle").css("filter" , "grayscale(100%)");
+
+    $("img.bottom").css("z-index" , 4);
+                $("img.bottom").css("padding-top" , 200);
+                $("img.bottom").css("filter" , "grayscale(0%)" );
+
+        
+  }
+    
+</script>
+=======
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="./lab.css"/>
+  <link rel="stylesheet" type="text/css" href="./jquery.bxslider.css"/>
+  <script src='./jquery-3.2.1.min.js'></script>
+  <script src="./jquery.bxslider.js"></script>
+</head>
+<body>
+  <div class='back-ground'>
+    <div class='left-title'>
+      <ul>
+        <li onClick='click1()'>Pic1</li>
+        <li onClick='click2()'>Pic2</li>
+        <li onClick='click3()'>Pic2</li>
+      </ul>
+    </div>
+    <div class='center-img'>
+      <div class='center-pic'>
+        <img class='abs top' src="./img/1.jpg">
+        <img class='abs middle' src="./img/2.jpg">
+        <img class='abs bottom' src="./img/3.jpg">
+        
+      </div>
+    </div>
+    <div class='right-img'>
+      <div class='bxslider'>
+          <div><img src="./img/1.jpg"></div>
+          <div><img src="./img/2.jpg"></div>
+          <div><img src="./img/3.jpg"></div>
+      </div>
+    </div>
+  </div>
+</body>
+<script type="text/javascript">
+  var slider;
+$( document ).ready(function() {
+    console.log( "ready!" );
+    
+   slider = $('.bxslider').bxSlider({
+      auto: false,
+      autoControls: false,
+      stopAutoOnClick: false,
+      pager: false,
+      slideWidth: 400
+      });
+
+});
+  function click1(){
+    slider.goToSlide(0);
+    $("img.top").css("z-index" , 4);
+        $("img.top").css("padding-top" , 160);
+                    $("img.top").css("filter" , "grayscale(0%)");
+
+    $("img.middle").css("z-index" , 2);
+        $("img.middle").css("padding-top" , 200);
+                    $("img.middle").css("filter" , "grayscale(100%)");
+
+
+    $("img.bottom").css("z-index" , 1);
+        $("img.bottom").css("padding-top" , 240);
+                  $("img.bottom").css("filter" , "grayscale(100%)" );
+
+  }
+  
+  function click2(){
+        slider.goToSlide(1);
+    $("img.top").css("z-index" , 3);
+            $("img.top").css("padding-top" , 60);
+                    $("img.top").css("filter" , "grayscale(100%)");
+
+
+    $("img.middle").css("z-index" , 4);
+            $("img.middle").css("padding-top" , 200);
+                    $("img.middle").css("filter" , "grayscale(0%)");
+
+
+    $("img.bottom").css("z-index" , 1);
+            $("img.bottom").css("padding-top" , 240);
+                $("img.bottom").css("filter" , "grayscale(100%)" );
+
+    
+  }
+  
+  function click3(){
+    slider.goToSlide(2);
+    $("img.top").css("z-index" , 3);
+                $("img.top").css("padding-top" , 60);
+                $("img.top").css("filter" , "grayscale(100%)");
+
+    $("img.middle").css("z-index" , 2);
+                $("img.middle").css("padding-top" , 80);
+                $("img.middle").css("filter" , "grayscale(100%)");
+
+    $("img.bottom").css("z-index" , 4);
+                $("img.bottom").css("padding-top" , 200);
+                $("img.bottom").css("filter" , "grayscale(0%)" );
+
+        
+  }
+    
+</script>
+>>>>>>> 216f84cd789e78052db90897c5699c3149dc1179
+</html>
